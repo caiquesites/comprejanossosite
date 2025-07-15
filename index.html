@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CriaFacil.ai - Versão Paga</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0b0f1a;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+    .container {
+      background: #111d2e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+    h1 {
+      color: #00ffff;
+    }
+    button {
+      background-color: #00aaff;
+      color: white;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0099dd;
+    }
+    #codigoPix {
+      margin: 20px 0;
+      word-break: break-word;
+      background-color: #001a33;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    .hidden {
+      display: none;
+    }
+    img {
+      margin-top: 15px;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #888;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CriaFacil.ai - Versão Paga</h1>
+    <p>Acesse a versão premium por apenas <strong>R$ 4,99</strong>!</p>
+
+    <button onclick="mostrarPagamento()">Obter Versão Paga</button>
+
+    <div id="pagamento" class="hidden">
+      <h3>📲 Realize o pagamento via Pix:</h3>
+      <p><strong>Use o QR Code ou copie o código abaixo:</strong></p>
+      <img src="https://i.imgur.com/WDGOyz3.png" alt="QR Code Pix">
+      <div id="codigoPix">
+        00020126500014br.gov.bcb.pix0111175943236960213CAIQUE DUARTE52040000530398654044.995802BR5923Caique Duarte Rodrigues6008Ipatinga62170513CAI14072025186304B1B9
+      </div>
+
+      <button onclick="confirmarPagamento()">Pagamento Feito</button>
+    </div>
+
+    <div id="confirmacao" class="hidden">
+      <h3>✅ Obrigado!</h3>
+      <p>Seu código de acesso é:</p>
+      <h2>🔓 BOACOMPRA</h2>
+      <p>Me chame no WhatsApp e envie o código:</p>
+      <a href="https://wa.me/5531980255684" target="_blank">📲 31980255684</a>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <h4>💬 Comprar direto no WhatsApp?</h4>
+      <a href="https://wa.me/5531980255684" target="_blank">
+        <button>Pagar pelo WhatsApp</button>
+      </a>
+    </div>
+
+    <footer>
+      <p>Todos os direitos reservados CriaFacil.ai — @caiquetrenzinhos</p>
+    </footer>
+  </div>
+
+  <script>
+    function mostrarPagamento() {
+      document.getElementById('pagamento').classList.remove('hidden');
+    }
+
+    function confirmarPagamento() {
+      document.getElementById('confirmacao').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
